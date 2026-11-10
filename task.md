@@ -41,35 +41,35 @@
 - **Vị trí tài liệu**: Trang 1 - 4 PDF (Mục II.1)
 - **Tập dữ liệu**: `Iris dataset` (`sklearn.datasets.load_iris`)
 - **Danh sách câu hỏi**:
-  - [ ] **Câu a**: Đọc bộ dữ liệu Iris từ thư viện `sklearn`.
-  - [ ] **Câu b**: Khảo sát bộ dữ liệu:
-    - [ ] In tên các thuộc tính và tên thuộc tính phân lớp (`feature_names`, `target_names`).
-    - [ ] In số lượng mẫu, số lượng thuộc tính (`data.shape`, `target.shape`).
-    - [ ] In 5 mẫu dữ liệu đầu tiên.
-    - [ ] Thống kê mô tả (count, mean, std, min, max, tứ phân vị) qua `DataFrame.describe()`.
-  - [ ] **Câu c**: Chuẩn hóa dữ liệu về đoạn $[0, 1]$ bằng cách chia mỗi giá trị cho giá trị lớn nhất trong cột tương ứng.
-  - [ ] **Câu d**: Phân chia tập dữ liệu thành tập train và test theo tỷ lệ 8:2 (`train_test_split`).
-  - [ ] **Câu e**: Xây dựng mô hình **Cây quyết định (DecisionTreeClassifier)**:
-    - [ ] Huấn luyện mô hình trên tập train.
-    - [ ] Dự đoán nhãn lớp cho tập test.
-    - [ ] Tính và in Accuracy trên tập test.
-    - [ ] Tính và in Precision, Recall, F1-score (từng lớp và trung bình) bằng `classification_report`.
-    - [ ] Hiển thị ma trận nhầm lẫn (Confusion Matrix) bằng Heatmap với Seaborn.
-  - [ ] **Câu f**: Xây dựng mô hình **Naïve Bayes (GaussianNB)**:
-    - [ ] Huấn luyện, dự đoán, tính Accuracy, Precision, Recall, F1-score và vẽ Heatmap Confusion Matrix.
-  - [ ] **Câu g**: Xây dựng mô hình **K-Nearest Neighbors (KNeighborsClassifier)**:
-    - [ ] Huấn luyện, dự đoán, tính Accuracy, Precision, Recall, F1-score và vẽ Heatmap Confusion Matrix.
-  - [ ] **Câu h**: Xây dựng mô hình **Mạng nơ-ron (Neural Network - Keras)**:
-    - [ ] Thiết kế kiến trúc mạng: 2 lớp ẩn (Hidden 1: 10 nơ-ron, ReLU, `input_shape=(4,)`; Hidden 2: 20 nơ-ron, ReLU) và 1 lớp ra (Output: 3 nơ-ron, Softmax).
-    - [ ] Biên dịch mô hình với optimizer `adam`, loss `sparse_categorical_crossentropy`, metric `accuracy`.
-    - [ ] Huấn luyện mô hình (`epochs=100`, `batch_size=1`, `verbose=1`).
-    - [ ] Dự đoán nhãn cho tập test (dùng `predict` kết hợp `np.argmax`).
-    - [ ] Tính Accuracy, Precision, Recall, F1-score và vẽ Heatmap Confusion Matrix.
-  - [ ] **Câu i**: Sử dụng cả 4 mô hình đã huấn luyện (e, f, g, h) dự đoán nhãn cho 3 mẫu dữ liệu mới:
+  - [x] **Câu a**: Đọc bộ dữ liệu Iris từ thư viện `sklearn`.
+  - [x] **Câu b**: Khảo sát bộ dữ liệu:
+    - [x] In tên các thuộc tính và tên thuộc tính phân lớp (`feature_names`, `target_names`).
+    - [x] In số lượng mẫu, số lượng thuộc tính (`data.shape`, `target.shape`).
+    - [x] In 5 mẫu dữ liệu đầu tiên.
+    - [x] Thống kê mô tả (count, mean, std, min, max, tứ phân vị) qua `DataFrame.describe()`.
+  - [x] **Câu c**: Chuẩn hóa dữ liệu về đoạn $[0, 1]$ bằng cách chia mỗi giá trị cho giá trị lớn nhất trong cột tương ứng.
+  - [x] **Câu d**: Phân chia tập dữ liệu thành tập train và test theo tỷ lệ 8:2 (`train_test_split`).
+  - [x] **Câu e**: Xây dựng mô hình **Cây quyết định (DecisionTreeClassifier)**:
+    - [x] Huấn luyện mô hình trên tập train.
+    - [x] Dự đoán nhãn lớp cho tập test.
+    - [x] Tính và in Accuracy trên tập test.
+    - [x] Tính và in Precision, Recall, F1-score (từng lớp và trung bình) bằng `classification_report`.
+    - [x] Hiển thị ma trận nhầm lẫn (Confusion Matrix) bằng Heatmap với Seaborn.
+  - [x] **Câu f**: Xây dựng mô hình **Naïve Bayes (GaussianNB)**:
+    - [x] Huấn luyện, dự đoán, tính Accuracy, Precision, Recall, F1-score và vẽ Heatmap Confusion Matrix.
+  - [x] **Câu g**: Xây dựng mô hình **K-Nearest Neighbors (KNeighborsClassifier)**:
+    - [x] Huấn luyện, dự đoán, tính Accuracy, Precision, Recall, F1-score và vẽ Heatmap Confusion Matrix.
+  - [x] **Câu h**: Xây dựng mô hình **Mạng nơ-ron (Neural Network - Keras)**:
+    - [x] Thiết kế kiến trúc mạng: 2 lớp ẩn (Hidden 1: 10 nơ-ron, ReLU, `input_shape=(4,)`; Hidden 2: 20 nơ-ron, ReLU) và 1 lớp ra (Output: 3 nơ-ron, Softmax).
+    - [x] Biên dịch mô hình với optimizer `adam`, loss `sparse_categorical_crossentropy`, metric `accuracy`.
+    - [x] Huấn luyện mô hình (`epochs=100`, `batch_size=1`, `verbose=1`).
+    - [x] Dự đoán nhãn cho tập test (dùng `predict` kết hợp `np.argmax`).
+    - [x] Tính Accuracy, Precision, Recall, F1-score và vẽ Heatmap Confusion Matrix.
+  - [x] **Câu i**: Sử dụng cả 4 mô hình đã huấn luyện (e, f, g, h) dự đoán nhãn cho 3 mẫu dữ liệu mới:
     - Mẫu 1: `[6.2, 2.9, 4.3, 1.3]`
     - Mẫu 2: `[5.1, 3.5, 1.4, 0.2]`
     - Mẫu 3: `[7.3, 2.8, 6.4, 2.1]`
-  - [ ] **Câu j**: Nhận xét, so sánh tổng hợp hiệu suất của các mô hình đã huấn luyện.
+  - [x] **Câu j**: Nhận xét, so sánh tổng hợp hiệu suất của các mô hình đã huấn luyện.
 
 ---
 
