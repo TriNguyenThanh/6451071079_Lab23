@@ -1,0 +1,13 @@
+numpy
+pandas
+seaborn
+matplotlib
+ipykernel
+openpyxl
+mlxtend
+scikit-learn
+pillow
+tensorflow
+plotly
+nbformat
+nbclient
