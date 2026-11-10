@@ -78,24 +78,24 @@
 - **Vị trí tài liệu**: Trang 5 - 7 PDF (Mục II.2)
 - **Tập dữ liệu**: `MNIST` (`keras.datasets.mnist`)
 - **Danh sách câu hỏi**:
-  - [ ] **Câu a**: Đọc bộ dữ liệu train, test của MNIST từ Keras.
-  - [ ] **Câu b**: In ra kích thước `shape` của tập train và test.
-  - [ ] **Câu c**: Chuẩn hóa các giá trị pixel về đoạn $[0, 1]$ bằng cách chia cho 255.0.
-  - [ ] **Câu d**: Phân chia tập train ban đầu thành tập train mới và validation theo tỷ lệ 8:2 bằng `train_test_split`. In kích thước sau khi chia.
-  - [ ] **Câu e**: Xây dựng mạng nơ-ron tuần tự gồm các tầng:
-    - [ ] Flatten layer: Làm phẳng ma trận $28 \times 28$ thành vector 784 chiều.
-    - [ ] Dense layer: 128 nơ-ron, hàm kích hoạt ReLU.
-    - [ ] Dropout layer: Tỷ lệ 0.2 (ngẫu nhiên tắt 20% nơ-ron để chống overfitting).
-    - [ ] Dense layer (Output): 10 nơ-ron, hàm kích hoạt Softmax.
-  - [ ] **Câu f**: Biên dịch mô hình (optimizer `adam`, loss `sparse_categorical_crossentropy`, metric `accuracy`).
-  - [ ] **Câu g**: Huấn luyện mô hình với `epochs=5`, `batch_size=32`, đánh giá cùng tập validation.
-  - [ ] **Câu h**: Vẽ đồ thị biến thiên của Accuracy và Loss qua từng epoch (cho cả train và validation).
-  - [ ] **Câu i**: Dự đoán phân lớp cho toàn bộ tập test (`predict` và `argmax`).
-  - [ ] **Câu j**: Tính và in ra Accuracy của mô hình trên tập test.
-  - [ ] **Câu k**: Tính và in Precision, Recall, F1-score từng lớp và trung bình.
-  - [ ] **Câu l**: Hiển thị Confusion Matrix bằng Heatmap.
-  - [ ] **Câu m**: Dự đoán và hiển thị hình ảnh minh họa cho 5 mẫu đầu tiên trong tập test.
-  - [ ] **Câu n**: Tìm và hiển thị hình ảnh của 5 trường hợp đầu tiên mô hình phân lớp sai so với nhãn thực tế.
+  - [x] **Câu a**: Đọc bộ dữ liệu train, test của MNIST từ Keras.
+  - [x] **Câu b**: In ra kích thước `shape` của tập train và test.
+  - [x] **Câu c**: Chuẩn hóa các giá trị pixel về đoạn $[0, 1]$ bằng cách chia cho 255.0.
+  - [x] **Câu d**: Phân chia tập train ban đầu thành tập train mới và validation theo tỷ lệ 8:2 bằng `train_test_split`. In kích thước sau khi chia.
+  - [x] **Câu e**: Xây dựng mạng nơ-ron tuần tự gồm các tầng:
+    - [x] Flatten layer: Làm phẳng ma trận $28 \times 28$ thành vector 784 chiều.
+    - [x] Dense layer: 128 nơ-ron, hàm kích hoạt ReLU.
+    - [x] Dropout layer: Tỷ lệ 0.2 (ngẫu nhiên tắt 20% nơ-ron để chống overfitting).
+    - [x] Dense layer (Output): 10 nơ-ron, hàm kích hoạt Softmax.
+  - [x] **Câu f**: Biên dịch mô hình (optimizer `adam`, loss `sparse_categorical_crossentropy`, metric `accuracy`).
+  - [x] **Câu g**: Huấn luyện mô hình với `epochs=5`, `batch_size=32`, đánh giá cùng tập validation.
+  - [x] **Câu h**: Vẽ đồ thị biến thiên của Accuracy và Loss qua từng epoch (cho cả train và validation).
+  - [x] **Câu i**: Dự đoán phân lớp cho toàn bộ tập test (`predict` và `argmax`).
+  - [x] **Câu j**: Tính và in ra Accuracy của mô hình trên tập test.
+  - [x] **Câu k**: Tính và in Precision, Recall, F1-score từng lớp và trung bình.
+  - [x] **Câu l**: Hiển thị Confusion Matrix bằng Heatmap.
+  - [x] **Câu m**: Dự đoán và hiển thị hình ảnh minh họa cho 5 mẫu đầu tiên trong tập test.
+  - [x] **Câu n**: Tìm và hiển thị hình ảnh của 5 trường hợp đầu tiên mô hình phân lớp sai so với nhãn thực tế.
 
 ---
 
@@ -104,18 +104,18 @@
 - **Vị trí tài liệu**: Trang 7 - 8 PDF (Mục II.3)
 - **Tập dữ liệu**: `MNIST` (`keras.datasets.mnist`)
 - **Danh sách câu hỏi**:
-  - [ ] **Câu a, b, c**: Đọc dữ liệu MNIST, in kích thước và chuẩn hóa pixel về đoạn $[0, 1]$.
-  - [ ] **Câu d**: Định nghĩa hàm `create_model()` khởi tạo và biên dịch mạng nơ-ron tương tự Bài 2.
-  - [ ] **Câu e**: Huấn luyện mô hình bằng K-Fold Cross Validation ($k = 10$):
-    - [ ] Thiết lập `KFold(n_splits=10, shuffle=True, random_state=42)`.
-    - [ ] Lặp qua 10 fold: huấn luyện với `epochs=5`, `batch_size=32`, lưu Accuracy và Loss của từng fold, lưu mô hình tương ứng.
-  - [ ] **Câu f**: Tính và in Mean Accuracy, Standard Deviation Accuracy, Mean Loss, Standard Deviation Loss qua 10 fold.
-  - [ ] **Câu g**: Vẽ biểu đồ biểu diễn Accuracy và Loss sau mỗi fold.
-  - [ ] **Câu h**: Tìm mô hình có Accuracy cao nhất giữa các fold trong quá trình huấn luyện.
-  - [ ] **Câu i**: Dùng mô hình tốt nhất tính và in Accuracy trên tập test.
-  - [ ] **Câu j**: Tính và in Precision, Recall, F1-score trên tập test.
-  - [ ] **Câu k**: Hiển thị Confusion Matrix bằng Heatmap trên tập test.
-  - [ ] **Câu l**: In kết quả phân lớp và hiển thị hình ảnh minh họa cho 5 ảnh đầu tiên trong tập test.
+  - [x] **Câu a, b, c**: Đọc dữ liệu MNIST, in kích thước và chuẩn hóa pixel về đoạn $[0, 1]$.
+  - [x] **Câu d**: Định nghĩa hàm `create_model()` khởi tạo và biên dịch mạng nơ-ron tương tự Bài 2.
+  - [x] **Câu e**: Huấn luyện mô hình bằng K-Fold Cross Validation ($k = 10$):
+    - [x] Thiết lập `KFold(n_splits=10, shuffle=True, random_state=42)`.
+    - [x] Lặp qua 10 fold: huấn luyện với `epochs=5`, `batch_size=32`, lưu Accuracy và Loss của từng fold, lưu mô hình tương ứng.
+  - [x] **Câu f**: Tính và in Mean Accuracy, Standard Deviation Accuracy, Mean Loss, Standard Deviation Loss qua 10 fold.
+  - [x] **Câu g**: Vẽ biểu đồ biểu diễn Accuracy và Loss sau mỗi fold.
+  - [x] **Câu h**: Tìm mô hình có Accuracy cao nhất giữa các fold trong quá trình huấn luyện.
+  - [x] **Câu i**: Dùng mô hình tốt nhất tính và in Accuracy trên tập test.
+  - [x] **Câu j**: Tính và in Precision, Recall, F1-score trên tập test.
+  - [x] **Câu k**: Hiển thị Confusion Matrix bằng Heatmap trên tập test.
+  - [x] **Câu l**: In kết quả phân lớp và hiển thị hình ảnh minh họa cho 5 ảnh đầu tiên trong tập test.
 
 ---
 
@@ -124,14 +124,14 @@
 - **Vị trí tài liệu**: Trang 9 PDF (Mục II.4)
 - **Tập dữ liệu**: `Iris dataset`
 - **Danh sách câu hỏi**:
-  - [ ] **Câu a, b**: Đọc bộ dữ liệu Iris và chuẩn hóa dữ liệu về đoạn $[0, 1]$.
-  - [ ] **Câu c**: Định nghĩa hàm `create_model()` trả về mạng nơ-ron theo đúng kiến trúc của Bài 1.h.
-  - [ ] **Câu d**: Huấn luyện mô hình bằng K-Fold Cross Validation ($k = 10$):
-    - [ ] Lưu và in ra Accuracy, Precision, Recall, F1-score sau mỗi fold.
-    - [ ] Lưu lại các mô hình sau mỗi fold.
-  - [ ] **Câu e**: Tính và in Average Accuracy, Average Recall, Average Precision, Average F1-score qua 10 fold.
-  - [ ] **Câu f**: Tính và in Average Recall, Average Precision, Average F1-score cho từng lớp phân loại.
-  - [ ] **Câu g**: Sử dụng mô hình có F1-score tốt nhất để dự đoán nhãn cho 3 mẫu dữ liệu mới (giống Bài 1.i).
+  - [x] **Câu a, b**: Đọc bộ dữ liệu Iris và chuẩn hóa dữ liệu về đoạn $[0, 1]$.
+  - [x] **Câu c**: Định nghĩa hàm `create_model()` trả về mạng nơ-ron theo đúng kiến trúc của Bài 1.h.
+  - [x] **Câu d**: Huấn luyện mô hình bằng K-Fold Cross Validation ($k = 10$):
+    - [x] Lưu và in ra Accuracy, Precision, Recall, F1-score sau mỗi fold.
+    - [x] Lưu lại các mô hình sau mỗi fold.
+  - [x] **Câu e**: Tính và in Average Accuracy, Average Recall, Average Precision, Average F1-score qua 10 fold.
+  - [x] **Câu f**: Tính và in Average Recall, Average Precision, Average F1-score cho từng lớp phân loại.
+  - [x] **Câu g**: Sử dụng mô hình có F1-score tốt nhất để dự đoán nhãn cho 3 mẫu dữ liệu mới (giống Bài 1.i).
 
 ---
 
@@ -140,20 +140,20 @@
 - **Vị trí tài liệu**: Trang 18 - 24 PDF (Phần 2 - Mục III.2)
 - **Tập dữ liệu**: `Dataset/Mall_Customers.csv`
 - **Danh sách câu hỏi**:
-  - [ ] **Câu 1**: Nhập dữ liệu, thống kê các thông tin cơ bản (`info`, `describe`), kiểm tra và xử lý dữ liệu khuyết thiếu.
-  - [ ] **Câu 2**: Vẽ biểu đồ phân phối tần suất (Histogram / Distplot / KDE) cho lần lượt các thuộc tính: `Age`, `Annual Income (k$)`, `Spending Score (1-100)`.
-  - [ ] **Câu 3**: Thống kê số lượng mẫu dữ liệu theo thuộc tính `Gender` bằng biểu đồ đếm (`countplot`).
-  - [ ] **Câu 4**: Vẽ biểu đồ phân tán (Scatter plot) khảo sát phân bố giữa `Age` và `Annual Income (k$)` theo `Gender`.
-  - [ ] **Câu 5**: Vẽ biểu đồ phân tán khảo sát phân bố giữa `Annual Income (k$)` và `Spending Score (1-100)` theo `Gender`.
-  - [ ] **Câu 6**: Gom cụm theo thuộc tính `Age` và `Spending Score (1-100)`:
-    - [ ] Áp dụng phương pháp khuỷu tay (Elbow method) chạy $k = 1 \dots 10$, tính WSS/Inertia, vẽ biểu đồ đường cong Elbow.
-    - [ ] Xác định số cụm tối ưu $k$ (thường chọn $k = 4$).
-    - [ ] Tiến hành gom cụm bằng `KMeans(n_clusters=4, init='random')`.
-  - [ ] **Câu 7**: Trực quan hóa kết quả gom cụm trên biểu đồ phân tán 2D (tô màu theo nhãn cụm và vẽ vị trí các tâm cụm `centroids`).
-  - [ ] **Câu 8**: Đánh giá chất lượng phân cụm bằng hệ số dáng điệu Silhouette (`metrics.silhouette_score`).
-  - [ ] **Câu 9**:
-    - [ ] Thực hiện lại quy trình tương tự (Elbow $\rightarrow$ $k$-Means $\rightarrow$ Trực quan hóa $\rightarrow$ Silhouette) cho cặp thuộc tính: `Annual Income (k$)` và `Spending Score (1-100)` (thường chọn $k = 5$).
-    - [ ] Thực hiện gom cụm theo cả 3 thuộc tính (`Age`, `Annual Income (k$)`, `Spending Score (1-100)`) và vẽ biểu đồ 3D tương tác bằng thư viện `plotly`.
+  - [x] **Câu 1**: Nhập dữ liệu, thống kê các thông tin cơ bản (`info`, `describe`), kiểm tra và xử lý dữ liệu khuyết thiếu.
+  - [x] **Câu 2**: Vẽ biểu đồ phân phối tần suất (Histogram / Distplot / KDE) cho lần lượt các thuộc tính: `Age`, `Annual Income (k$)`, `Spending Score (1-100)`.
+  - [x] **Câu 3**: Thống kê số lượng mẫu dữ liệu theo thuộc tính `Gender` bằng biểu đồ đếm (`countplot`).
+  - [x] **Câu 4**: Vẽ biểu đồ phân tán (Scatter plot) khảo sát phân bố giữa `Age` và `Annual Income (k$)` theo `Gender`.
+  - [x] **Câu 5**: Vẽ biểu đồ phân tán khảo sát phân bố giữa `Annual Income (k$)` và `Spending Score (1-100)` theo `Gender`.
+  - [x] **Câu 6**: Gom cụm theo thuộc tính `Age` và `Spending Score (1-100)`:
+    - [x] Áp dụng phương pháp khuỷu tay (Elbow method) chạy $k = 1 \dots 10$, tính WSS/Inertia, vẽ biểu đồ đường cong Elbow.
+    - [x] Xác định số cụm tối ưu $k$ (thường chọn $k = 4$).
+    - [x] Tiến hành gom cụm bằng `KMeans(n_clusters=4, init='random')`.
+  - [x] **Câu 7**: Trực quan hóa kết quả gom cụm trên biểu đồ phân tán 2D (tô màu theo nhãn cụm và vẽ vị trí các tâm cụm `centroids`).
+  - [x] **Câu 8**: Đánh giá chất lượng phân cụm bằng hệ số dáng điệu Silhouette (`metrics.silhouette_score`).
+  - [x] **Câu 9**:
+    - [x] Thực hiện lại quy trình tương tự (Elbow $\rightarrow$ $k$-Means $\rightarrow$ Trực quan hóa $\rightarrow$ Silhouette) cho cặp thuộc tính: `Annual Income (k$)` và `Spending Score (1-100)` (thường chọn $k = 5$).
+    - [x] Thực hiện gom cụm theo cả 3 thuộc tính (`Age`, `Annual Income (k$)`, `Spending Score (1-100)`) và vẽ biểu đồ 3D tương tác bằng thư viện `plotly`.
 
 ---
 
@@ -162,13 +162,13 @@
 - **Vị trí tài liệu**: Trang 26 PDF (Phần 2 - Mục IV.5)
 - **Tập dữ liệu**: `MNIST`
 - **Danh sách công việc**:
-  - [ ] Đọc dữ liệu MNIST từ Keras, làm phẳng ma trận thành vector 784 chiều, chuẩn hóa pixel về đoạn $[0, 1]$.
-  - [ ] Áp dụng thuật toán `KMeans(n_clusters=10, random_state=42)` để gom thành 10 cụm.
-  - [ ] Thiết lập ánh xạ từ số cụm (Cluster ID) sang nhãn chữ số thực tế dựa trên phân bố nhãn chiếm đa số (Majority Voting) trong mỗi cụm.
-  - [ ] Đánh giá độ phù hợp của kết quả gom cụm so với nhãn thực tế:
-    - [ ] Tính Accuracy, Precision, Recall, F1-score.
-    - [ ] Vẽ ma trận nhầm lẫn (Confusion Matrix) dạng Heatmap.
-  - [ ] Trực quan hóa 10 vector tâm cụm (Cluster Centroids) dưới dạng hình ảnh $28 \times 28$ pixel để quan sát chữ số đại diện của từng cụm.
+  - [x] Đọc dữ liệu MNIST từ Keras, làm phẳng ma trận thành vector 784 chiều, chuẩn hóa pixel về đoạn $[0, 1]$.
+  - [x] Áp dụng thuật toán `KMeans(n_clusters=10, random_state=42)` để gom thành 10 cụm.
+  - [x] Thiết lập ánh xạ từ số cụm (Cluster ID) sang nhãn chữ số thực tế dựa trên phân bố nhãn chiếm đa số (Majority Voting) trong mỗi cụm.
+  - [x] Đánh giá độ phù hợp của kết quả gom cụm so với nhãn thực tế:
+    - [x] Tính Accuracy, Precision, Recall, F1-score.
+    - [x] Vẽ ma trận nhầm lẫn (Confusion Matrix) dạng Heatmap.
+  - [x] Trực quan hóa 10 vector tâm cụm (Cluster Centroids) dưới dạng hình ảnh $28 \times 28$ pixel để quan sát chữ số đại diện của từng cụm.
 
 ---
 
@@ -177,13 +177,13 @@
 - **Vị trí tài liệu**: Trang 26 - 28 PDF (Phần 2 - Mục IV.6)
 - **Tập dữ liệu**: File ảnh màu thực tế (`Dataset/dog.png` hoặc ảnh mẫu tương đương)
 - **Danh sách công việc**:
-  - [ ] Đọc ảnh màu bằng thư viện `PIL.Image`, hiển thị ảnh gốc và in kích thước ảnh `(rows, cols, channels)`.
-  - [ ] Chuyển mảng ảnh sang mảng số thực NumPy, chuẩn hóa giá trị màu về đoạn $[0, 1]$ và đổi kích thước thành ma trận 2D `(rows * cols, 3)`.
-  - [ ] Chạy thuật toán `KMeans(n_clusters=32, max_iter=300, random_state=42)` để tìm 32 màu chủ đạo.
-  - [ ] Thay thế giá trị màu của từng pixel bằng giá trị tâm cụm gần nhất (`kmeans.cluster_centers_[kmeans.predict(data)]`).
-  - [ ] Khôi phục lại mảng ảnh thành dạng 3 chiều `(rows, cols, 3)`, chuyển về khoảng $[0, 255]$ với kiểu `np.uint8`.
-  - [ ] Hiển thị so sánh song song giữa ảnh gốc và ảnh đã lượng tử hóa màu (32 màu).
-  - [ ] Lưu ảnh nén xuống ổ đĩa (`compressed_image.png`) và so sánh dung lượng tệp trước và sau khi nén.
+  - [x] Đọc ảnh màu bằng thư viện `PIL.Image`, hiển thị ảnh gốc và in kích thước ảnh `(rows, cols, channels)`.
+  - [x] Chuyển mảng ảnh sang mảng số thực NumPy, chuẩn hóa giá trị màu về đoạn $[0, 1]$ và đổi kích thước thành ma trận 2D `(rows * cols, 3)`.
+  - [x] Chạy thuật toán `KMeans(n_clusters=32, max_iter=300, random_state=42)` để tìm 32 màu chủ đạo.
+  - [x] Thay thế giá trị màu của từng pixel bằng giá trị tâm cụm gần nhất (`kmeans.cluster_centers_[kmeans.predict(data)]`).
+  - [x] Khôi phục lại mảng ảnh thành dạng 3 chiều `(rows, cols, 3)`, chuyển về khoảng $[0, 255]$ với kiểu `np.uint8`.
+  - [x] Hiển thị so sánh song song giữa ảnh gốc và ảnh đã lượng tử hóa màu (32 màu).
+  - [x] Lưu ảnh nén xuống ổ đĩa (`compressed_image.png`) và so sánh dung lượng tệp trước và sau khi nén.
 
 ---
 
@@ -192,16 +192,16 @@
 - **Vị trí tài liệu**: Trang 29 PDF (Phần 2 - Mục V.5)
 - **Tập dữ liệu**: `Breast Cancer Wisconsin (Diagnostic)` (`sklearn.datasets.load_breast_cancer`)
 - **Danh sách công việc**:
-  - [ ] Đọc bộ dữ liệu ung thư vú Wisconsin (569 mẫu bệnh nhân, 30 thuộc tính hình thái tế bào, nhãn: Benign - lành tính / Malignant - ác tính).
-  - [ ] Khảo sát dữ liệu, phân tích phân phối các thuộc tính.
-  - [ ] Chuẩn hóa dữ liệu bằng `StandardScaler` (hoặc `MinMaxScaler`) để đồng nhất thang đo giữa 30 thuộc tính đo đạc.
-  - [ ] Gom cụm bằng thuật toán `KMeans(n_clusters=2, random_state=42)`.
-  - [ ] So khớp cụm tìm được với nhãn chẩn đoán thực tế.
-  - [ ] Đánh giá chất lượng phân cụm:
-    - [ ] Tính Accuracy, Precision, Recall, F1-score so với nhãn bác sĩ chẩn đoán.
-    - [ ] Vẽ ma trận nhầm lẫn (Confusion Matrix).
-    - [ ] Tính hệ số dáng điệu Silhouette Score.
-  - [ ] Đưa ra nhận xét, đánh giá về khả năng ứng dụng giải thuật học không giám sát trong hỗ trợ sàng lọc tế bào học y khoa ban đầu.
+  - [x] Đọc bộ dữ liệu ung thư vú Wisconsin (569 mẫu bệnh nhân, 30 thuộc tính hình thái tế bào, nhãn: Benign - lành tính / Malignant - ác tính).
+  - [x] Khảo sát dữ liệu, phân tích phân phối các thuộc tính.
+  - [x] Chuẩn hóa dữ liệu bằng `StandardScaler` (hoặc `MinMaxScaler`) để đồng nhất thang đo giữa 30 thuộc tính đo đạc.
+  - [x] Gom cụm bằng thuật toán `KMeans(n_clusters=2, random_state=42)`.
+  - [x] So khớp cụm tìm được với nhãn chẩn đoán thực tế.
+  - [x] Đánh giá chất lượng phân cụm:
+    - [x] Tính Accuracy, Precision, Recall, F1-score so với nhãn bác sĩ chẩn đoán.
+    - [x] Vẽ ma trận nhầm lẫn (Confusion Matrix).
+    - [x] Tính hệ số dáng điệu Silhouette Score.
+  - [x] Đưa ra nhận xét, đánh giá về khả năng ứng dụng giải thuật học không giám sát trong hỗ trợ sàng lọc tế bào học y khoa ban đầu.
 
 ---
 
